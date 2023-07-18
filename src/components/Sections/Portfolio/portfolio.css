@@ -1,0 +1,89 @@
+.portfolio_container {
+    display: grid;
+    place-items: center;
+    gap: 0.8rem;
+}
+
+.portfolio_container small {
+    width: 20rem;
+    text-align: center;
+}
+
+.port_top_btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.recent_projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.project_card {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.project_card:hover .project_links .btn.first {
+    background: var(--color-white);
+}
+
+.project_links .btn.first:hover {
+    border-color: var(--color-primary);
+}
+
+.project_card h5{
+    margin: 1rem auto 0.5rem auto;
+}
+
+.project_img {
+    border-radius: var(--border-radius-2);
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+
+.project_links{
+    display: flex;
+    gap: 1rem;
+    margin:2rem 0 0rem 0;
+}
+
+/*----------Hiding Cards-----------*/
+.upcoming_project {
+    display: none;
+}
+
+/*=================Tablets===============*/
+@media screen and (max-width:1024px) {
+    .recent_projets {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    
+    .project_links{
+        margin: 1.3rem 0 0rem 0;
+    }
+}
+
+/*=================Mobile Pnoes===============*/
+@media screen and (max-width:600px) {
+    .recent_projets {
+        grid-template-columns:1fr;
+        gap: 0.8rem;
+    }
+
+    .port_top_btns button:last-child {
+        padding: 0 1rem;
+    }
+
+    .project_links{
+        margin: 1rem 0 0rem 0;
+    }
+    
+}

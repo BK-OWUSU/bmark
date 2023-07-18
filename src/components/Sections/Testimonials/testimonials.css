@@ -1,0 +1,61 @@
+
+#tetimonials p {
+    text-align: center;
+    margin: 0.5rem auto 4rem auto;
+}
+
+.test_container.container {
+    width: 60vmin;
+    background: var(--color-light);
+    border-radius: var(--border-radius-2);
+    height: 25vmin;
+}
+
+.swpier_container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.test_info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1.5rem 0 0 0;
+}
+
+.swpier_container p {
+    font-size: 1.1rem;
+}
+
+.test_img {
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+}
+
+.test_details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/*=================Tablets===============*/
+@media screen and (max-width:1024px) {
+    .test_container {
+        width: 70%;
+    }
+
+    .swpier_container p {
+        font-size: 0.9rem;
+    }
+}
+
+/*=================Mobile Pnoes===============*/
+@media screen and (max-width:600px) {
+    .test_container.container {
+        width: 93%;
+        height: 100%;
+    } 
+}

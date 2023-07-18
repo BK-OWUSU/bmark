@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,500&display=swap');
+
+:root {
+  --primary-hue: 270;
+  --black-lightness: 15%;
+  --dark-lightness: 44%;
+  --light-lightness: 90%;
+  --white-lightness: 97%;
+  --color-primary: hsl(var(--primary-hue), 89%, 41%);
+
+  --color-white: hsl(0, 5%, var(--white-lightness));
+  --color-white-1: hsl(0, 5%, var(--white-lightness));
+  --color-light: hsl(var(--primary-hue),5%, var(--light-lightness));
+  --color-black: hsl(var(--primary-hue),5%, var(--black-lightness));
+  --color-black-1: hsl(var(--primary-hue),5%, var(--black-lightness));
+  --color-dark: hsl(var(--primary-hue),5%, var(--dark-lightness)); 
+  --color-bg:  #1a1a1a;
+  --color-bg1:  #213547;
+
+  /*GENERAL CONTAINER VARIBLES*/
+  --container-width-lg: 76%;
+  --container-width-md: 90%;
+  --container-width-sm: 100%;
+
+  /*GENERAL RADIUS VARIBLES*/
+  --border-radius-1: 1.2rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 0.5rem;
+
+  /*GENERAL CONTAINER VARIBLES*/
+  --transition: all 500ms ease;
+  --transition-long: all 700ms ease;
+}
+
+/*============THEME COLOURS=============*/
+[data-themeBg = 'bgDark'] {
+  --color-white:  hsl(252, 30%, 17%);
+  --color-light: hsl(252, 30%, 10%);
+  --color-black: #fff;
+  --color-white-1: #fbf4f4;
+}
+
+[data-themeBg = 'bgBlack'] {
+  --color-white:  hsl(252, 30%, 10%);
+  --color-light: hsl(252, 30%, 0%);
+  --color-black: #fff;
+  --color-white-1: #fbf4f4;
+}
+
+[data-themePrimary = 'colorViolet'] {
+  --color-primary: rgb(122, 51, 155);
+}
+
+[data-themePrimary = 'colorGreen'] {
+  --color-primary: rgb(27, 201, 27);
+}
+
+[data-themePrimary = 'colorRed'] {
+  --color-primary: rgb(239, 61, 61);
+}
+
+[data-themePrimary = 'colorPink'] {
+  --color-primary: rgb(227, 63, 164);;
+}
+/*============THEME COLOURS=============*/
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin-inline:auto;
+  max-width: 1920px;
+}
+
+section {
+  padding: 10rem 0;
+  background: var(--color-light);
+  transition: var(--transition);
+}
+
+section:nth-child(odd) {
+  background: var(--color-white);
+}
+
+section > h2 {
+  text-align: center;
+}
+
+section > p {
+  text-align: center;
+  margin: 0.5rem auto 4rem auto;
+  width: 40%;
+}
+
+a {
+  color: var(--color-white-1); 
+  transition: var(--transition);
+}
+
+p {
+  color: var(--color-black);
+}
+
+button {
+  transition: var(--transition);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  color: var(--color-black);
+}
+
+h1 {font-size: 3rem; color: var(--color-black);}
+h2 {font-size: 2rem; color: var(--color-black);}
+h3 {font-size: 1.6rem; color: var(--color-black);}
+h4 {font-size: 1.1rem; color: var(--color-black);}
+h5 {font-size: 0.95rem; color: var(--color-black);}
+h6 {font-size: 0.8rem; color: var(--color-black);}
+small {color: var(--color-black);}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-light);
+  color: var(--color-black);
+  padding: 0.6rem 2rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-2);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  transform: translateY(-0.5rem);
+}
+
+.btn.white {
+  background: var(--color-white);
+}
+
+.btn.white:hover {
+  background: transparent;
+  border-color: var(--color-white-1);
+}
+
+.btn.primary {
+  background: var(--color-primary);
+  color: var(--color-white-1);
+}
+
+.btn.primary:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn.sm {
+  padding: 0.5rem 1.2rem;
+}
+
+/*---------Fading intersection Oberver Effects------------*/
+.fade-in {
+  opacity: 0;
+  transition: 1.5s;
+  transform: translateY(5rem);
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transition: 1.5s;
+  transform: translateY(0);
+}
+
+.fader {
+  opacity: 0;
+  transition: 2s;
+}
+
+.fader.appear {
+  opacity: 1;
+  animation: fading 1.2s;
+}
+
+@keyframes fading {
+  0% {opacity: 0;}
+  20% {opacity: 0.2;}
+  40% {opacity: 0.4;}
+  60% {opacity: 0.6;}
+  80% {opacity: 0.8;}
+  100% {opacity: 1;}
+}
+/*---------End of Fading intersection Oberver Effects------------*/
+
+/*=============TABLET MEDIA SCREENS===========*/
+@media screen and (max-width:1024px) {
+  body {
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    padding: 8rem 0;
+  }
+
+  section > p {
+    width: 70%;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+}
+
+
+/*=============MOBILE PHONES MEDIA SCREENS===========*/
+@media screen and (max-width:600px) {
+  section {padding: 6rem 0;}
+
+  h1 {font-size: 2.1rem;}
+
+  h2 {font-size: 1.4rem;}
+
+  h3 {font-size: 1.2rem;}
+
+  h4 {font-size: 1rem;}
+
+  .btn {padding: 0.5rem;}
+
+  .section > p {
+    width: var(--container-width-md);
+  }
+}
+
+
+
+

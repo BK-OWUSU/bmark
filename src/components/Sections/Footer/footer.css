@@ -1,0 +1,75 @@
+#footer {
+    background: var(--color-primary);
+}
+
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footer_links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 0 0;
+    align-items: center;
+}
+
+.footer_links a:hover {
+    color: var(--color-light);
+}
+
+.footer_socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4rem;
+}
+
+.footer_card{
+    width: fit-content;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background: var(--color-black-1);
+}
+
+.footer_card a {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_card:hover {
+    background: transparent;
+    border-color: var(--color-white-1);
+}
+
+.footer_card:hover a {
+    color: var(--color-black-1);
+}
+
+.footer_copyright {
+    border-top: 1px solid rgba(255,255,255, 0.3);
+    width: 100vw;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/*==========Mobile Phones===========*/
+
+@media screen and (max-width: 600px) {
+    .footer_container {
+        gap: 1.5rem;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        margin: 2rem 0 0 0;
+        gap: 0.7rem;
+    }
+       
+    .footer_socials {
+        gap: 0.8rem;
+    }
+}
