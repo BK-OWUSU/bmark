@@ -25,9 +25,7 @@ const Faqs = () => {
           {
             faqData.map(item =>(
               <Card key = {item.id} className = {`fade-in faq_card`}
-              onClick = {(e)=>{
-                e.target.classList.toggle('open')
-              }}>
+              onClick = {(e)=>{e.target.classList.toggle('open')}}>
                   <div className="faq_icon">
                     {item.icon} 
                   </div>
