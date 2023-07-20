@@ -198,34 +198,32 @@ video {
 /*---------Fading intersection Oberver Effects------------*/
 .fade-in {
   opacity: 0;
-  transition: 1s;
+  transition: 1.2s;
   transform: translateY(5rem);
 }
 
 .fade-in.appear {
-  opacity: 1;
-  transition: 1s;
+  opacity: 1.2;
+  transition: 1.2s;
   transform: translateY(0);
 }
 
+.fade-in.appear:hover {
+  transform: translateY(-0.5rem);
+}
+
 .fader {
+  transform: scale(0);
   opacity: 0;
-  transition: 1s;
+  transition: 1.2s;
 }
 
 .fader.appear {
-  opacity: 1;
-  animation: fading 1s;
+  transform: scale(1);
+  opacity: 1.2;
+  transition: 0.9s;
 }
 
-@keyframes fading {
-  0% {opacity: 0;}
-  20% {opacity: 0.2;}
-  40% {opacity: 0.4;}
-  60% {opacity: 0.6;}
-  80% {opacity: 0.8;}
-  100% {opacity: 1;}
-}
 /*---------End of Fading intersection Oberver Effects------------*/
 
 /*=============TABLET MEDIA SCREENS===========*/

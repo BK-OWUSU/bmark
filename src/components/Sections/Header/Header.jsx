@@ -25,7 +25,7 @@ const Header = () => {
             <img src={HeaderProfile} alt="profile" />
           </div>
 
-          <h3 className='fader'>Bismart Kofi Owusu </h3>
+          <h3 className='fader'>BismarK Kofi Owusu </h3>
           <p className='fade-in'>You are a click away from building your own amazing website. Just send me the details of your project for a quick morden and highly responsive web Apps today!
           </p>
           <div className="header_cta">
