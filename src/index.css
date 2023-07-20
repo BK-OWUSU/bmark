@@ -220,7 +220,7 @@ video {
 
 .fader.appear {
   transform: scale(1);
-  opacity: 1.2;
+  opacity: 1.6;
   transition: 0.9s;
 }
 
